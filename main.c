@@ -4,6 +4,16 @@
 #include <ctype.h>
 #include <locale.h>
 
+void imp(int a, int b, int c, char op){
+    printf ("Operação: %.2f %c %.2f\n", a, op, b);
+    printf ("Resultado: %.2f", c);
+}
+
+void le(int a, int b){
+    printf("Quais os números? (Ex: 13 34)\n");
+    scanf ("2%d", a, b); 
+}
+
 int main()
 {
     system("cls");
