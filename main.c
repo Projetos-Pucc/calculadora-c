@@ -4,6 +4,10 @@
 #include <ctype.h>
 #include <locale.h>
 
+float div(float a, float b){
+    return (a/b);
+}
+
 void imp(float a, float b, float c, char op){
     printf ("Operação: %.2f %c %.2f\n", a, op, b);
     printf ("Resultado: %.2f", c);
