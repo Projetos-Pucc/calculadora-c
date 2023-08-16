@@ -4,26 +4,24 @@
 #include <ctype.h>
 #include <locale.h>
 
-void imp(int a, int b, int c, char op){
-    printf ("Operação: %.2f %c %.2f\n", a, op, b);
-    printf ("Resultado: %.2f", c);
+void printResult(float num1, float num2, float result, char op) {
+    printf("Operação: %.2f %c %.2f\n", num1, op, num2);
+    printf("Resultado: %.2f", result);
 }
 
-void le(int a, int b){
+void readNumbers(float *num1, float *num2) {
     printf("Quais os números? (Ex: 13 34)\n");
-    scanf ("2%d", a, b); 
+    scanf("%f %f", num1, num2);
 }
 
-int main()
-{
-    float a,b,c;
+int main() {
+    float num1 = 0, num2 = 0, result = 0;
+    int menuOption = 0;
+    
     system("cls");
     setlocale(LC_ALL, "Portuguese");
 
-    int opcao = 0;
-
-   do
-    {
+    do {
         system("cls");
         printf("========================\n");
         printf("========Calculadoa======\n");
@@ -31,15 +29,14 @@ int main()
 
         printf("[1]Soma\n[2]Subtração\n[3]Multiplicação\n[4]Divisão\n[5]Raiz Quadrada\n[6]Potência\n");
 
-        scanf("%d", &opcao);
+        scanf("%d", &menuOption);
 
-        switch (opcao)
-        {
-        case 1:
-            break;
+        switch (menuOption) {
+            case 1:
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
-    } while (opcao != 0 && opcao != 2);
+    } while (menuOption != 0 && menuOption != 2);
 }
