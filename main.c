@@ -5,7 +5,7 @@
 #include <locale.h>
 
 float div(float a, float b){
-    return a/b;
+    return (a/b);
 }
 
 void imp(float a, float b, float c, char op){
