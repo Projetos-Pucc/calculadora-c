@@ -13,10 +13,13 @@ void le(int a, int b){
     printf("Quais os números? (Ex: 13 34)\n");
     scanf ("2%d", a, b); 
 }
+
 float soma (float a, float b) {
-    a + b = c;
+    float c; 
+    c = a + b;
     return c;
 }
+
 int main()
 {
     float a,b,c;
