@@ -6,25 +6,32 @@
 
 void imp(float a, float b, float c, char op){
     printf ("Operação: %.2f %c %.2f\n", a, op, b);
-    printf ("Resultado: %.2f\n", c);
+    printf ("Resultado: %.2f", c);
 }
 
-void le(float *a, float *b){
+void le(int a, int b){
     printf("Quais os números? (Ex: 13 34)\n");
-    scanf ("%f %f", a, b); 
+    scanf ("%d %d", &a, &b); 
+}
+
+float subtracao(float *a,float *b,float *c){
+    printf("Digite os números que serão subtraídos: ");
+    scanf("%f %f", a, b);
+    (*c) = (*a) - (*b);
+    return (*c);
 }
 
 int main()
 {
     float a,b,c;
-    system("clear");
+    system("cls");
     setlocale(LC_ALL, "Portuguese");
 
     int opcao = 0;
 
    do
     {
-        system("clear");
+        system("cls");
         printf("========================\n");
         printf("========Calculadoa======\n");
         printf("========================\n");
@@ -35,12 +42,13 @@ int main()
 
         switch (opcao)
         {
-        case 1:
+        case 2: c = subtracao(&a,&b,&c);
+        imp(a,b,c,'-');
+
             break;
 
         default:
             break;
         }
     } while (opcao != 0 && opcao != 2);
-
 }
