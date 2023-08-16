@@ -4,27 +4,27 @@
 #include <ctype.h>
 #include <locale.h>
 
-void imp(int a, int b, int c, char op){
+void imp(float a, float b, float c, char op){
     printf ("Operação: %.2f %c %.2f\n", a, op, b);
-    printf ("Resultado: %.2f", c);
+    printf ("Resultado: %.2f\n", c);
 }
 
-void le(int a, int b){
+void le(float *a, float *b){
     printf("Quais os números? (Ex: 13 34)\n");
-    scanf ("2%d", a, b); 
+    scanf ("%f %f", a, b); 
 }
 
 int main()
 {
     float a,b,c;
-    system("cls");
+    system("clear");
     setlocale(LC_ALL, "Portuguese");
 
     int opcao = 0;
 
    do
     {
-        system("cls");
+        system("clear");
         printf("========================\n");
         printf("========Calculadoa======\n");
         printf("========================\n");
@@ -42,4 +42,5 @@ int main()
             break;
         }
     } while (opcao != 0 && opcao != 2);
+
 }
