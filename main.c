@@ -18,6 +18,7 @@ void le(float *a, float *b){
     scanf ("%f %f", a, b); 
 }
 
+<<<<<<< HEAD
 float subtracao(float a,float b){
 
 return a - b;
@@ -27,6 +28,10 @@ float soma (float a, float b) {
     float c; 
     c = a + b;
     return c;
+=======
+float mult(float a, float b){
+    return a*b; 
+>>>>>>> 25bbefed4d56eed37442a4609570deb0e3903e49
 }
 
 int main()
