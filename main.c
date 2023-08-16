@@ -15,6 +15,10 @@ void le(int a, int b){
     scanf ("2%d", a, b); 
 }
 
+float squareRoot(float num) {
+    return sqrt(num);
+}
+
 int main()
 {
     float a,b,c;
@@ -23,9 +27,8 @@ int main()
 
     int opcao = 0;
 
-   do
-    {
-        system("cls");
+   do {
+        //system("cls");
         printf("========================\n");
         printf("========Calculadoa======\n");
         printf("========================\n");
@@ -34,8 +37,7 @@ int main()
 
         scanf("%d", &opcao);
 
-        switch (opcao)
-        {
+        switch (opcao){
         case 1:
             break;
 
