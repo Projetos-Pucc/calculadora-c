@@ -3,6 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <locale.h>
+#include <math.h> 
 
 void imp(int a, int b, int c, char op){
     printf ("Operação: %.2f %c %.2f\n", a, op, b);
