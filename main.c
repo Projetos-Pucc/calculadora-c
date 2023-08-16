@@ -3,6 +3,11 @@
 #include <string.h>
 #include <ctype.h>
 #include <locale.h>
+#include <math.h>
+
+float poww(float a, float b){
+    return powf(a, b);
+}
 
 int main()
 {
