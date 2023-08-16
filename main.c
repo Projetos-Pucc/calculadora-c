@@ -23,6 +23,12 @@ float subtracao(float a,float b){
 return a - b;
 }
 
+float soma (float a, float b) {
+    float c; 
+    c = a + b;
+    return c;
+}
+
 int main()
 {
     float a,b,c;
