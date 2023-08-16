@@ -14,6 +14,10 @@ void le(float *a, float *b){
     scanf ("%f %f", a, b); 
 }
 
+float mult(float a, float b){
+    return a*b; 
+}
+
 int main()
 {
     float a,b,c;
