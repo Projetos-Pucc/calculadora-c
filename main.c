@@ -4,46 +4,42 @@
 #include <ctype.h>
 #include <locale.h>
 
-float div(float a, float b){
-    return (a/b);
+void imp(float a, float b, float c, char op) {
+    printf("Operação: %.2f %c %.2f\n", a, op, b);
+    printf("Resultado: %.2f", c);
 }
 
-void imp(float a, float b, float c, char op){
-    printf ("Operação: %.2f %c %.2f\n", a, op, b);
-    printf ("Resultado: %.2f", c);
-}
-
-void le(float *a, float *b){
+void le(float *a, float *b) {
     printf("Quais os números? (Ex: 13 34)\n");
-    scanf ("%f %f", a, b); 
+    scanf("%f %f", a, b);
 }
 
-<<<<<<< HEAD
-float subtracao(float a,float b){
-
-return a - b;
+float subtracao(float a, float b) {
+    return a - b;
 }
 
-float soma (float a, float b) {
-    float c; 
+float soma(float a, float b) {
+    float c;
     c = a + b;
     return c;
-=======
-float mult(float a, float b){
-    return a*b; 
->>>>>>> 25bbefed4d56eed37442a4609570deb0e3903e49
 }
 
-int main()
-{
-    float a,b,c;
+float mult(float a, float b) {
+    return a * b;
+}
+
+float divisao(float a, float b){
+    return a / b;
+}
+
+int main() {
+    float a, b, c;
     system("cls");
     setlocale(LC_ALL, "Portuguese");
 
     int opcao = 0;
 
-   do
-    {
+    do {
         system("cls");
         printf("========================\n");
         printf("========Calculadoa======\n");
@@ -52,15 +48,14 @@ int main()
         printf("[1]Soma\n[2]Subtração\n[3]Multiplicação\n[4]Divisão\n[5]Raiz Quadrada\n[6]Potência\n");
 
         scanf("%d", &opcao);
-        
-        system("cls");
-        le(&a,&b);
 
-        switch (opcao)
-        {
-        case 2: 
-        c = subtracao(a,b);
-        imp(a,b,c,'-');
+        system("cls");
+        le(&a, &b);
+
+        switch (opcao) {
+        case 2:
+            c = subtracao(a, b);
+            imp(a, b, c, '-');
 
             break;
 
