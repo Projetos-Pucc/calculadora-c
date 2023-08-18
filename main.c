@@ -4,40 +4,19 @@
 #include <ctype.h>
 #include <locale.h>
 
-void imp(float a, float b, float c, char op) {
-    printf("Operação: %.2f %c %.2f\n", a, op, b);
-    printf("Resultado: %.2f\n", c);
-}
+void print(float num1, float num2, float result, char op);
+void readNumbers(float *num1, float *num2);
+float minus(float num1, float num2);
+float plus(float num1, float num2);
+float multi(float num1, float num2);
+float division(float num1, float num2);
 
-void le(float *a, float *b) {
-    printf("Quais os números? (Ex: 13 34)\n");
-    scanf("%f %f", a, b);
-}
+int main(){
+    float num1 = 0, num2 = 0;
+    int menuOption = 0;
 
-float subtracao(float a, float b) {
-    return a - b;
-}
-
-float soma(float a, float b) {
-    float c;
-    c = a + b;
-    return c;
-}
-
-float mult(float a, float b) {
-    return a * b;
-}
-
-float divisao(float a, float b){
-    return a / b;
-}
-
-int main() {
-    float a, b, c;
     system("cls");
     setlocale(LC_ALL, "Portuguese");
-
-    int opcao = 0;
 
     do {
         system("cls");
@@ -47,27 +26,56 @@ int main() {
 
         printf("[1]Soma\n[2]Subtração\n[3]Multiplicação\n[4]Divisão\n[0]Sair\n");
 
-        scanf("%d", &opcao);
+        scanf("%d", &menuOption);
 
-        system("cls");
+        if(menuOption <= 4 && menuOption > 0) {
+            readNumbers(&num1, &num2);
 
-        if (opcao!=0)
-            le(&a, &b);
-        switch(opcao){
-            case 0:break;
-            case 1:
-                imp(a, b, soma(a, b), '+');
-                break;
-            case 2:
-                imp(a, b, subtracao(a, b), '-');
-                break;
-            case 3:
-                imp(a, b, mult(a, b), '*');
-                break;
-            case 4:
-                imp(a, b, divisao(a, b), '//');
-                break;
+            switch (menuOption) {
+                case 0:
+                    break;
+                case 1:
+                    print(num1, num2, plus(num1, num2), '+');
+                    break;
+                case 2:
+                    print(num1, num2, minus(num1, num2), '-');
+                    break;
+                case 3:
+                    print(num1, num2, multi(num1, num2), '*');
+                    break;
+                case 4:
+                    print(num1, num2, division(num1, num2), '/');
+                    break;
+            }
         }
-    } while (opcao != 0);
-    return 0; 
+
+    } while (menuOption != 0);
+
+    return 0;
+}
+
+void print(float num1, float num2, float result, char op) {
+    printf("Operação: %.2f %c %.2f\n", num1, op, num2);
+    printf("Resultado: %.2f\n", result);
+}
+
+void readNumbers(float *num1, float *num2) {
+    printf("Quais os números? (Ex: 13 34)\n");
+    scanf("%f %f", num1, num2);
+}
+
+float minus(float num1, float num2) {
+    return num1 - num2;
+}
+
+float plus(float num1, float num2) {
+    return num1 + num2;
+}
+
+float multi(float num1, float num2) {
+    return num1 * num2;
+}
+
+float division(float num1, float num2) {
+    return num1 / num2;
 }
