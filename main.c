@@ -51,14 +51,22 @@ int main() {
 
         system("cls");
 
-        switch (opcao) {
-        case 2:
+        if (opcao!=0)
             le(&a, &b);
-            c = subtracao(a, b);
-            imp(a, b, c, '-');
-
-            break;
-
+        switch(opcao){
+            case 0:break;
+            case 1:
+                imp(a, b, soma(a, b), '+');
+                break;
+            case 2:
+                imp(a, b, subtracao(a, b), '-');
+                break;
+            case 3:
+                imp(a, b, mult(a, b), '*');
+                break;
+            case 4:
+                imp(a, b, divisao(a, b), '//');
+                break;
         }
     } while (opcao != 0);
     return 0; 
