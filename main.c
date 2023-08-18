@@ -45,7 +45,7 @@ int main() {
         printf("========Calculadoa======\n");
         printf("========================\n");
 
-        printf("[1]Soma\n[2]Subtração\n[3]Multiplicação\n[4]Divisão\n[5]Raiz Quadrada\n[6]Potência\n");
+        printf("[1]Soma\n[2]Subtração\n[3]Multiplicação\n[4]Divisão\n[5]Sair\n");
 
         scanf("%d", &opcao);
 
@@ -59,8 +59,7 @@ int main() {
 
             break;
 
-        default:
-            break;
         }
     } while (opcao != 0 && opcao != 2);
+
 }
