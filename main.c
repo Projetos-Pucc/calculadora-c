@@ -6,7 +6,7 @@
 
 void imp(float a, float b, float c, char op) {
     printf("Operação: %.2f %c %.2f\n", a, op, b);
-    printf("Resultado: %.2f", c);
+    printf("Resultado: %.2f\n", c);
 }
 
 void le(float *a, float *b) {
@@ -45,21 +45,21 @@ int main() {
         printf("========Calculadoa======\n");
         printf("========================\n");
 
-        printf("[1]Soma\n[2]Subtração\n[3]Multiplicação\n[4]Divisão\n[5]Sair\n");
+        printf("[1]Soma\n[2]Subtração\n[3]Multiplicação\n[4]Divisão\n[0]Sair\n");
 
         scanf("%d", &opcao);
 
         system("cls");
-        le(&a, &b);
 
         switch (opcao) {
         case 2:
+            le(&a, &b);
             c = subtracao(a, b);
             imp(a, b, c, '-');
 
             break;
 
         }
-    } while (opcao != 0 && opcao != 2);
-
+    } while (opcao != 0);
+    return 0; 
 }
