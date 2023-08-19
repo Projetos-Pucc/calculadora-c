@@ -7,7 +7,7 @@ void print(float num1, float num2, float result, char op);
 void readNumbers(float *num1, float *num2);
 float minus(float num1, float num2);
 float plus(float num1, float num2);
-float multi(float num1, float num2);
+float multiplication(float num1, float num2);
 float division(float num1, float num2);
 
 int main(){
@@ -40,7 +40,7 @@ int main(){
                     print(num1, num2, minus(num1, num2), '-');
                     break;
                 case 3:
-                    print(num1, num2, multi(num1, num2), '*');
+                    print(num1, num2, multiplication(num1, num2), '*');
                     break;
                 case 4:
                     print(num1, num2, division(num1, num2), '/');
@@ -71,7 +71,7 @@ float plus(float num1, float num2) {
     return num1 + num2;
 }
 
-float multi(float num1, float num2) {
+float multiplication(float num1, float num2) {
     return num1 * num2;
 }
 
