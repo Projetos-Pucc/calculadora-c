@@ -26,7 +26,8 @@ int main(){
         printf("[1]Soma\n[2]Subtracao\n[3]Multiplicacao\n[4]Divisao\n[0]Sair\n");
 
         scanf("%d", &menuOption);
-
+        system("cls");
+        
         if(menuOption <= 4 && menuOption > 0) {
             readNumbers(&num1, &num2);
 
