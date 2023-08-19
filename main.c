@@ -18,12 +18,12 @@ int main(){
     setlocale(LC_ALL, "Portuguese");
 
     do {
-        system("cls");
+
         printf("========================\n");
         printf("========Calculadoa======\n");
         printf("========================\n");
 
-        printf("[1]Soma\n[2]Subtração\n[3]Multiplicação\n[4]Divisão\n[0]Sair\n");
+        printf("[1]Soma\n[2]Subtracao\n[3]Multiplicacao\n[4]Divisao\n[0]Sair\n");
 
         scanf("%d", &menuOption);
 
@@ -54,12 +54,12 @@ int main(){
 }
 
 void print(float num1, float num2, float result, char op) {
-    printf("Operação: %.2f %c %.2f\n", num1, op, num2);
-    printf("Resultado: %.2f\n", result);
+    printf("Operacao: %.2f %c %.2f\n", num1, op, num2);
+    printf("Resultado: %.2f\n\n", result);
 }
 
 void readNumbers(float *num1, float *num2) {
-    printf("Quais os números? (Ex: 13 34)\n");
+    printf("Quais os numeros? (Ex: 13 34)\n");
     scanf("%f %f", num1, num2);
 }
 
