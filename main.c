@@ -18,7 +18,7 @@ int main(){
     setlocale(LC_ALL, "Portuguese");
 
     do {
-
+        system("cls");
         printf("========================\n");
         printf("========Calculadoa======\n");
         printf("========================\n");
