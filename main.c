@@ -17,9 +17,9 @@ int main(){
     system("cls");
     do {
 
-        printf("========================\n");
-        printf("========Calculadoa======\n");
-        printf("========================\n");
+        printf("=========================\n");
+        printf("========Calculadora======\n");
+        printf("=========================\n");
 
         printf("[1]Soma\n[2]Subtracao\n[3]Multiplicacao\n[4]Divisao\n[0]Sair\n");
 
