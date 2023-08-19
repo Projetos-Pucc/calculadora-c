@@ -15,8 +15,6 @@ int main(){
     int menuOption = 0;
 
     system("cls");
-    setlocale(LC_ALL, "Portuguese");
-
     do {
 
         printf("========================\n");
